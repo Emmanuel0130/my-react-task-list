@@ -17,6 +17,21 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+table {
+  width: 100%;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+th,
+td {
+  width: 25%;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #20b35d;
+  border-spacing: 0;
+  text-align: center;
+}
 
 @keyframes logo-spin {
   from {

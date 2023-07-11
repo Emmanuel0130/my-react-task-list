@@ -18,7 +18,7 @@ export const TaskCreator = ({ createNewTask }) => {
         value={newTaskName}
         onChange={(e) => setNewTaskName(e.target.value)}
       />
-      <button>save task</button>
+      <button>Add Task</button>
     </form>
   );
 };
