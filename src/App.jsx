@@ -4,6 +4,11 @@ import { TaskCreator } from "./components/TaskCreator";
 import { TaskTable } from "./components/TaskTable";
 import { VisibilityControl } from "./VisibilityControl";
 import LoginForm from "./components/formulario";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home";
+import { Tareas } from "./components/Tareas";
+import { SobreNosotros } from "./components/SobreNosotros";
+import  Menu from './components/Menu';
 
 function App() {
   const [tasksItems, setTasksItems] = useState([]);
@@ -49,6 +54,15 @@ function App() {
       cleanTasks={ cleanTasks }
       
       />
+
+<BrowserRouter>
+      <Menu />
+      <Routes>
+      <Route exact path="/" components={<Home />} />
+      <Route path="/Tareas" components={<Tareas />} />
+      <Route path="/SobreNosotros" componente={<SobreNosotros />} />
+      </Routes>
+    </BrowserRouter>
 
       {showCompleted === true && (
         <TaskTable
