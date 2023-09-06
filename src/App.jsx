@@ -3,6 +3,7 @@ import "./App.css";
 import { TaskCreator } from "./components/TaskCreator";
 import { TaskTable } from "./components/TaskTable";
 import { VisibilityControl } from "./VisibilityControl";
+import LoginForm from "./components/formulario";
 
 function App() {
   const [tasksItems, setTasksItems] = useState([]);
@@ -38,6 +39,8 @@ function App() {
 
   return (
     <div className="App">
+       <LoginForm />
+      <br />
       <TaskCreator createNewTask={createNewTask} />
       <TaskTable tasks={tasksItems} toggleTask={toggleTask} />
       <VisibilityControl 
@@ -53,7 +56,8 @@ function App() {
           toggleTask={toggleTask}
           showCompleted={showCompleted}
         />
-      )}
+      )
+      }
     </div>
   );
 }
