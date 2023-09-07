@@ -12,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render (
 ReactDOM.render(
   <ChakraProvider>
     <CSSReset />
-    <App />
   </ChakraProvider>,
   document.getElementById('root')
 );

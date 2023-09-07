@@ -9,6 +9,7 @@ import { Home } from "./components/Home";
 import { Tareas } from "./components/Tareas";
 import { SobreNosotros } from "./components/SobreNosotros";
 import  Menu from './components/Menu';
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 
 function App() {
   const [tasksItems, setTasksItems] = useState([]);
@@ -63,6 +64,10 @@ function App() {
       <Route path="/SobreNosotros" componente={<SobreNosotros />} />
       </Routes>
     </BrowserRouter>
+    
+    <ChakraProvider>
+    <CSSReset />
+  </ChakraProvider>
 
       {showCompleted === true && (
         <TaskTable
